@@ -1,1 +1,1 @@
-# homework 1 and 2 and 3
+# homework from 1 to 3
