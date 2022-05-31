@@ -44,7 +44,7 @@ public class InteractionServiceConsole implements InteractionService {
         showResults();
     }
 
-    boolean selectLanguage() {
+    public boolean selectLanguage() {
         ioService.print(NEXT_STEP);
         ioService.print(greeting);
         ioService.printSurroundQuotes(language);
@@ -76,7 +76,7 @@ public class InteractionServiceConsole implements InteractionService {
         ioService.printSurroundQuotes(exit);
     }
 
-    boolean login() {
+    public boolean login() {
         ioService.print(NEXT_STEP);
         ioService.printBundledMessage("name");
         String name = ioService.getTyped();
@@ -117,7 +117,7 @@ public class InteractionServiceConsole implements InteractionService {
         startNewTest();
     }
 
-    String getAnswer(Question question) {
+    public String getAnswer(Question question) {
         ioService.print(question.getQuestion());
         ioService.print(question.getFirstAnswer());
         ioService.print(question.getSecondAnswer());
