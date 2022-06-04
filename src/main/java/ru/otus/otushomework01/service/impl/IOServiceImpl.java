@@ -2,6 +2,7 @@ package ru.otus.otushomework01.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.otus.otushomework01.domain.Question;
 import ru.otus.otushomework01.service.IOService;
 import ru.otus.otushomework01.service.LocalizationService;
 
@@ -38,5 +39,14 @@ public class IOServiceImpl implements IOService {
     @Override
     public void printBundledMessage(String key) {
         print(localizationService.getBundledMessage(key));
+    }
+
+    @Override
+    public void printQuestion(Question question) {
+        print(question.getQuestion());
+        print(question.getFirstAnswer());
+        print(question.getSecondAnswer());
+        print(question.getThirdAnswer());
+        print(localizationService.getBundledMessage("shell.use-answer-command"));
     }
 }

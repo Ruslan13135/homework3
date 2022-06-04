@@ -11,3 +11,48 @@ app:
       - рус
       - ru
       - en
+spring:
+  profiles:
+    active: shell
+---
+spring:
+  main:
+    allow-circular-references: true
+  shell:
+    interactive:
+      enabled: true
+    command:
+      history:
+        enabled: false
+      script:
+        enabled: false
+      stacktrace:
+        enabled: false
+  config:
+    activate:
+      on-profile: shell
+
+---
+
+spring:
+  shell:
+    interactive:
+      enabled: false
+  main:
+    allow-circular-references: true
+    banner-mode: off
+  config:
+    activate:
+      on-profile: test
+
+---
+
+spring:
+  main:
+    allow-circular-references: true
+  shell:
+    interactive:
+      enabled: false
+  config:
+    activate:
+      on-profile: console

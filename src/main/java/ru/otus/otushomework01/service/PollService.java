@@ -22,4 +22,12 @@ public interface PollService {
     void restart();
 
     void addNextComment(Question question, String answer);
+
+    boolean isStarted();
+
+    boolean isFinished();
+
+    Question getCurrentQuestion();
+
+    Question getNextQuestion();
 }
