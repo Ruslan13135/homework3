@@ -1,0 +1,13 @@
+app:
+  localization-properties:
+    resource-urls:
+      en: /questions-en.csv
+      ru: /questions-ru.csv
+    greeting: 'Укажите язык / Choice language'
+    exit:
+      - выйти
+      - exit
+    language:
+      - рус
+      - ru
+      - en

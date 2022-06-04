@@ -1,0 +1,6 @@
+id, question                                                ,firstAnswer      ,secondAnswer      ,ThirdAnswer         ,rightAnswer
+1  ,What race is not in World of Warcraft?                  ,1 Orc            ,2 Night elf       ,3 Mutant            ,3 Mutant
+2  ,What programming language does not exist?               ,1 С++            ,2 Java            ,3 Viper++           ,2 Java
+3  ,Which planet doesn't exist?                             ,1 Ptune          ,2 Neptune         ,3 Earth             ,1 Ptune
+4  ,What year was Einstein born?                            ,1 1870           ,2 1873            ,3 1879              ,3 1879
+5  ,In what year did Gagarin fly into space?                ,1 1960           ,2 1961            ,3 1962              ,3 1962
