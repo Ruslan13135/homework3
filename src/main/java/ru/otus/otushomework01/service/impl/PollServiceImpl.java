@@ -83,4 +83,29 @@ public class PollServiceImpl implements PollService {
     private String rightAnswer() {
         return localizationService.getBundledMessage("rightAnswer");
     }
+
+    @Override
+    public Question getNextQuestion() {
+        if (currentQuestionIndex == 0) {
+            questionSize = questionDao.count();
+        }
+        currentQuestion = questionDao.getById(++currentQuestionIndex, localizationService.getCurrentLocale().getLanguage());
+        return currentQuestion;
+    }
+
+    @Override
+    public Question getCurrentQuestion() {
+        currentQuestion = questionDao.getById(currentQuestionIndex, localizationService.getCurrentLocale().getLanguage());
+        return currentQuestion;
+    }
+
+    @Override
+    public boolean isStarted() {
+        return currentQuestion != null;
+    }
+
+    @Override
+    public boolean isFinished() {
+        return !quizResults.isEmpty() && questionSize == quizResults.size();
+    }
 }

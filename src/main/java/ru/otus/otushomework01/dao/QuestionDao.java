@@ -7,5 +7,9 @@ import java.util.Map;
 
 public interface QuestionDao {
 
+    int count();
+
+    Question getById(int id, String localization);
+
     Map<Integer, Question> getAllQuestion(String localization);
 }

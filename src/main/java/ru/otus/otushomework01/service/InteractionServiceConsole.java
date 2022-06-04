@@ -57,7 +57,7 @@ public class InteractionServiceConsole implements InteractionService {
 
         if (availableLocales.containsKey(lang)) {
             localizationService.setCurrentLocale(availableLocales.get(lang));
-            return availableLocales.get(lang).toString();
+            return String.format(localizationService.getBundledMessage("selected-language"), lang);
         } else if (isExit(lang)) {
             return "";
         }
@@ -157,7 +157,7 @@ public class InteractionServiceConsole implements InteractionService {
         return false;
     }
 
-    boolean startQuizAgain(String answer) {
+    public boolean startQuizAgain(String answer) {
         if (localizationService.getBundledMessage("say-yes").equals(answer)) {
             return true;
         } else if (isExit(answer)) {

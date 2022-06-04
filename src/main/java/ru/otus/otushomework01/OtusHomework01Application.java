@@ -8,16 +8,11 @@ import ru.otus.otushomework01.service.InteractionService;
 
 @SpringBootApplication
 @AllArgsConstructor
-public class OtusHomework01Application implements CommandLineRunner {
+public class OtusHomework01Application {
 
     private final InteractionService interactionService;
 
     public static void main(String[] args) {
         SpringApplication.run(OtusHomework01Application.class, args);
-    }
-
-    @Override
-    public void run(String... args) {
-        interactionService.startInteraction();
     }
 }

@@ -24,6 +24,17 @@ public class QuestionDaoImpl implements QuestionDao, InitializingBean {
     }
 
     @Override
+    public Question getById(int id, String localization) {
+        Map<Integer, Question> questions = localizedQuestionsMap.get(localization);
+        return questions.get(id);
+    }
+
+    @Override
+    public int count() {
+        return localizedQuestionsMap.entrySet().iterator().next().getValue().size();
+    }
+
+    @Override
     public Map<Integer, Question> getAllQuestion(String localization) {
         return localizedQuestionsMap.get(localization);
     }
